@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>天津大学仁爱学院大学物理实验平台-管理员后台</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/data.css">
+   <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/jquery.dataTables.css">
+    <link rel="stylesheet" href="css/laydate.css">
+    <link rel="stylesheet" href="css/editor.css">
+    <link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/page.js"></script>
+</head>
+<body>
+<!---->
+<div class="jumbotron teacher_banner img-responsive" style="margin-top: 0px;height: 170px;">
+    <div class="container">
+    	
+        <h1>管理员后台</h1>
+        
+		<a href="index.html" class="btn btn-default navbar-btn pull-right btn-xs" style="margin-right: 8px;">
+	            注销
+	            <span class="glyphicon glyphicon-off"></span>
+	
+	        </a>
+	        <span style="line-height: 50px;" class="pull-right">xxx管理员，欢迎你&nbsp;&nbsp;</span>
+	        
+    </div>
+   
+    	
+     
+</div>
+
+<div class="teacher_content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+              <div class="teacher_left">
+                  <ul class="nav nav-pills nav-stacked">
+                      <li><a href="#" id="upload"><span class="glyphicon glyphicon-file"></span>实验上传</a></li>
+                      <li><a href="#" id="exper"><span class="glyphicon glyphicon-pencil"></span>实验分配系统</a></li>
+                  </ul>
+              </div>
+            </div>
+            <div class="col-md-9">
+                <div class="teacher_right" id="experimentUpload" style="display: block;">
+                    <blockquote>
+                        实验上传
+                    </blockquote>
+
+                    <div class="experiment center-block">
+
+                        <form>
+                            <div class="form-group">
+                                <p>
+                                    <label for="experiment_name">实验名称：</label>
+                                    <input type="text" class="form-control" id="experiment_name">
+                                </p>
+                                <p>
+                                    <label for="experiment_room">实验教室</label>
+                                    <select class="form-control" id="experiment_room">
+                                        <option>301</option>
+                                        <option>302</option>
+                                        <option>303</option>
+                                        <option>304</option>
+                                        <option>305</option>
+                                        <option>306</option>
+                                        <option>307</option>
+                                    </select>
+                                </p>
+                                <p>
+                                    <label for="experiment_classify">实验分类</label>
+                                    <select class="form-control" id="experiment_classify">
+                                        <option>光学实验</option>
+                                        <option>热学实验</option>
+                                        <option>电学实验</option>
+                                        <option>声学实验</option>
+                                        <option>力学实验</option>
+                                    </select>
+                                </p>
+                                <p>
+                                <label for="txtEditor">实验描述</label>
+                                <input id="txtEditor2" type="text" />
+
+                                </p>
+                                <p>
+                                    <label for="inputfile">上传文件</label>
+                                    <input type="file" id="inputfile">
+                                </p>
+                                <input type="button" class="btn btn-default btn-block" value="上传">
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+				<!--实验分配-->
+				<div class="teacher_right" id="experiment"  style="display: none;">
+                    <blockquote>
+                        实验分配系统
+                    </blockquote>
+                    <div class="distr_form">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <select class="distr_list form-control">
+                                        <option>实验分类一</option>
+                                        <option>实验分类二</option>
+                                        <option>实验分类三</option>
+                                        <option>实验分类四</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-5">
+                                    <select class="distr_list form-control">
+                                        <option>实验一</option>
+                                        <option>实验二</option>
+                                        <option>实验三</option>
+                                        <option>实验四</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2">
+                                    <button class="distr_btn btn btn-primary" data-toggle="modal" data-target="#myModal">
+                                        分配
+                                    </button>
+
+                                </div>
+
+                            </div>
+                            <div class="row" style="margin-top: 20px;">
+                                <div class="col-md-4">
+                                    <label for="exeT">负责教师：</label>
+                                    <select class="distr_list form-control" id="exeT">
+                                        <option>教师一</option>
+                                        <option>教师二</option>
+                                        <option>教师三</option>
+                                        <option>教师四</option>
+                                        <option>教师五</option>
+                                        <option>教师六</option>
+                                    </select>
+
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="beginT">实验开始时间：</label>
+                                    <input type="text" class="distr_list form-control" id="beginT" onclick="laydate()">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="overT">实验截至时间：</label>
+                                    <input type="text" class="distr_list form-control" id="overT" onclick="laydate()">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <table class="table table-hover" id="mytable2">
+                        <thead>
+                        <tr>
+                            <th>选定</th>
+                            <th>姓名</th>
+                            <th>学号</th>
+                            <th>系别</th>
+                            <th>专业</th>
+                            <th>班级</th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th><input type="checkbox"></th>
+                            <th>测试用户1</th>
+                            <th>000001</th>
+                            <th>计算机系</th>
+                            <th>软件工程</th>
+                            <th>班级005</th>
+                        </tr>
+                        <tr>
+                            <th><input type="checkbox"></th>
+                            <th>测试用户6</th>
+                            <th>000008</th>
+                            <th>计算机系</th>
+                            <th>数字媒体</th>
+                            <th>班级002</th>
+                        </tr>
+                        <tr>
+                            <th><input type="checkbox"></th>
+                            <th>测试用户3</th>
+                            <th>000003</th>
+                            <th>计算机系</th>
+                            <th>网络安全</th>
+                            <th>班级002</th>
+                        </tr>
+                        <tr>
+                            <th><input type="checkbox"></th>
+                            <th>测试用户4</th>
+                            <th>000004</th>
+                            <th>计算机系</th>
+                            <th>网络工程</th>
+                            <th>班级002</th>
+                        </tr>
+                        <tr>
+                            <th><input type="checkbox"></th>
+                            <th>测试用户10</th>
+                            <th>000006</th>
+                            <th>计算机系</th>
+                            <th>黑客技术</th>
+                            <th>班级001</th>
+                        </tr>
+                        <tr>
+                            <th><input type="checkbox"></th>
+                            <th>测试用户4</th>
+                            <th>000005</th>
+                            <th>计算机系</th>
+                            <th>软件工程</th>
+                            <th>班级007</th>
+                        </tr>
+                        <tr>
+                            <th><input type="checkbox"></th>
+                            <th>测试用户2</th>
+                            <th>000007</th>
+                            <th>计算机系</th>
+                            <th>计算机科学与技术</th>
+                            <th>班级008</th>
+                        </tr>
+                        <tr>
+                            <th><input type="checkbox"></th>
+                            <th>测试用户8</th>
+                            <th>000005</th>
+                            <th>社外系</th>
+                            <th>软件工程</th>
+                            <th>班级009</th>
+                        </tr>
+                        <tr>
+                            <th><input type="checkbox"></th>
+                            <th>测试用户2</th>
+                            <th>000006</th>
+                            <th>计算机系</th>
+                            <th>软件工程</th>
+                            <th>班级004</th>
+                        </tr>
+                        <tr>
+                            <th><input type="checkbox"></th>
+                            <th>测试用户3</th>
+                            <th>000010</th>
+                            <th>信息系</th>
+                            <th>软件工程</th>
+                            <th>班级010</th>
+                        </tr>
+                        <tr>
+                            <th><input type="checkbox"></th>
+                            <th>测试用户8</th>
+                            <th>000009</th>
+                            <th>建工系</th>
+                            <th>软件工程</th>
+                            <th>班级010</th>
+                        </tr>
+                        <tr>
+                            <th><input type="checkbox"></th>
+                            <th>测试用户7</th>
+                            <th>000002</th>
+                            <th>计算机系</th>
+                            <th>软件工程</th>
+                            <th>班级001</th>
+                        </tr>
+                        <tr>
+                            <th><input type="checkbox"></th>
+                            <th>测试用户4</th>
+                            <th>000002</th>
+                            <th>计算机系</th>
+                            <th>软件工程</th>
+                            <th>班级001</th>
+                        </tr>
+                        <tr>
+                            <th><input type="checkbox"></th>
+                            <th>测试用户9</th>
+                            <th>000002</th>
+                            <th>社外系</th>
+                            <th>商务英语</th>
+                            <th>班级001</th>
+                        </tr>
+                        <tr>
+                            <th><input type="checkbox"></th>
+                            <th>测试用户2</th>
+                            <th>000002</th>
+                            <th>社外系</th>
+                            <th>法学</th>
+                            <th>班级007</th>
+                        </tr>
+                        <tr>
+                            <th><input type="checkbox"></th>
+                            <th>测试用户2</th>
+                            <th>000002</th>
+                            <th>计算机系</th>
+                            <th>软件工程</th>
+                            <th>班级008</th>
+                        </tr>
+                        </tbody>
+                    </table>
+              </div>
+
+				
+				
+            </div>
+        </div>
+    </div>
+</div>
+<!--experimentModal-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">分配结果</h4>
+            </div>
+            <div class="modal-body">
+                <table class="table table-hover center-block">
+                    <thead>
+                    <tr>
+                        <th>已选学生</th>
+                        <th>已选实验</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>学生1</th>
+                        <th>实验1</th>
+                    </tr>
+                    <tr>
+                        <th>学生2</th>
+                        <th>实验2</th>
+                    </tr>
+                    <tr>
+                        <th>学生3</th>
+                        <th>实验3</th>
+                    </tr>
+                    <tr>
+                        <th>学生4</th>
+                        <th>实验4</th>
+                    </tr>
+                    <tr>
+                        <th>学生5</th>
+                        <th>实验5</th>
+                    </tr><tr>
+                        <th>学生6</th>
+                        <th>实验6</th>
+                    </tr>
+                    <tr>
+                        <th>学生7</th>
+                        <th>实验7</th>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">提交更改</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<div class="footer_t"></div>
+<div class="footer">
+    天津大学仁爱学院计算机系<br>
+    copyright&copy;2017
+
+</div>
+
+<script src="js/bootstrap.js"></script>
+<script src="js/index.js"></script>
+<script src="js/editor.js"></script>
+<script src="js/dataTables.bootstrap.js"></script>
+<script src="js/jquery.dataTables.min.js"></script>
+<script src="js/laydate.js"></script>
+<script src="js/editor.js"></script>
+<script>
+    $(document).ready(function() {
+    	
+        $("#txtEditor2").Editor({
+            'bold':false,
+            'print':false,
+            'insert_table':false,
+            'insert_link':false,
+            'unlink':false,
+            'block_quote':false,
+            'strike_through':false,
+            'ol':false,
+            'ul':false,
+            'justify':false,
+            'strikeout':false,
+            'hr_line':false,
+        });
+    	
+    	
+  
+        $('#mytable2').DataTable({
+            language: {
+                "sProcessing": "处理中...",
+                "sLengthMenu": "显示 _MENU_ 项结果",
+                "sZeroRecords": "没有匹配结果",
+                "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+                "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
+                "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+                "sInfoPostFix": "",
+                "sSearch": "搜索:",
+                "sUrl": "",
+                "sEmptyTable": "表中数据为空",
+                "sLoadingRecords": "载入中...",
+                "sInfoThousands": ",",
+                "oPaginate": {
+                    "sFirst": "首页",
+                    "sPrevious": "上页",
+                    "sNext": "下页",
+                    "sLast": "末页"
+                },
+                "oAria": {
+                    "sSortAscending": ": 以升序排列此列",
+                    "sSortDescending": ": 以降序排列此列"
+                }
+            }
+
+        });
+    });
+</script>
+</body>
+</html>

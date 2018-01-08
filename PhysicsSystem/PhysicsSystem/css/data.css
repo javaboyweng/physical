@@ -1,0 +1,111 @@
+a:focus,a:visited,a:active {
+    border:none;
+    outline:none;
+}
+
+.video_status{
+    float: right;
+    line-height: 48px;
+}
+.video_header{
+    width: 100%;
+    height: 48px;
+    border-radius: 3px 3px 0px 0px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 48px;
+    margin: 0 auto;
+    color: #7a7f82;
+    display: inline-block;
+}
+#talk_pane{
+    position: absolute;
+    top:30%;
+}
+
+
+
+.playvideo{
+    height: auto;
+    cursor: pointer;
+}
+body{
+    min-height: 100vh;
+}
+.data_content{
+    background: white;
+    box-shadow: 2px 2px 3px #ccc;
+}
+.word_content{
+    margin-top: 30px;
+    padding: 10px;
+    margin-bottom: 20px;
+
+}
+.video_nav{
+    background: white;
+    box-shadow: 2px 2px 3px #ccc;
+    padding: 10px;
+}
+
+
+.glyphicon-ok-circle{
+    color: #0c0;
+}
+.glyphicon-remove-circle{
+    color: red;
+}
+.video_nav ol li span{
+
+    float: right;
+}
+.video_nav ol li a{
+    color: #666666;
+    text-decoration: none;
+}
+.talk_nav{
+    min-height: 700px;
+    position: relative;
+    background: white;
+    box-shadow: 2px 2px 3px #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+.talk_nav ul li{
+    list-style: none;
+    border-bottom: 1px solid #eeeeee;
+    width: 100%;
+    padding-bottom: 20px;
+
+}
+.talk_nav ul li span{
+    float: right;
+}
+.talk_send{
+    position: absolute;
+    bottom: 0px;
+    width: 90%;
+}
+.talk_send button{
+    margin-top: 10px;
+    float: right;
+
+}
+
+.word_data{
+    padding: 20px 40px;
+}
+
+.distr_btn{
+    float: right;
+}
+.distr_form{
+    width: 100%;
+    margin: 40px auto;
+
+}
+.media-list{
+    margin-top: 10px;
+
+}

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>天津大学仁爱学院大学物理实验平台-主页</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/index.js"></script>
+	
+	<script src="js/dataTables.bootstrap.js"></script>
+	<script src="js/jquery.dataTables.min.js"></script>
+	<link rel="stylesheet" href="css/jquery.dataTables.css">
+    <link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
+</head>
+<body>
+	
+<!--<img src="images/banner.jpg" class="img-responsive img-rounded img-thumbnail">-->
+
+
+
+<!--
+	作者：956910931@qq.com
+	时间：2017-04-04
+	描述：轮播
+-->
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="images/banner.jpg" alt="...">
+      <div class="carousel-caption">
+     ...
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/banner.jpg" alt="...">
+      <div class="carousel-caption">
+        ...
+      </div>
+    </div>
+     <div class="item">
+      <img src="images/banner.jpg" alt="...">
+      <div class="carousel-caption">
+        ...
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<!--轮播结束-->
+
+
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-brand">
+			<span>
+			<img src="images/logo.png">
+          天津大学仁爱学院
+			</span>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active" id="main"><a href="index.html">首页</a></li>
+            <li><a href="evaluation.html">教师评价</a></li>
+            <li id="updatePwdParent"><a href="#" data-toggle="modal" data-target="#passWord" id="updatePwd">密码修改</a> </li>
+        </ul>
+        <a href="teacher.html" class="btn btn-default navbar-btn pull-right btn-xs">
+            注销
+            <span class="glyphicon glyphicon-off"></span>
+
+        </a>
+        <span style="line-height: 50px;" class="pull-right">xxx同学，欢迎你&nbsp;&nbsp;</span>
+    </div>
+</nav>
+<div class="container-fluid content1">
+    <div class="row">
+        <div class="col-md-7">
+            <div class="ann">
+                <blockquote>
+                    公告
+                </blockquote>
+                <ul class="ann_content">
+                    <li><a href="ann.html">网络中心机房安装设备网络中断通知</a><span>2017-3-16</span></li>
+                    <li><a href="ann.html">天津大学仁爱学院招聘公告</a><span>2017-3-16</span></li>
+                    <li><a href="ann.html">关于斯旺西大学与我校硕士学位培养项目的宣讲通知（本周四）</a><span>2017-3-16</span></li>
+                    <li><a href="ann.html">关于我校推荐天津市优秀创新创业导师人才库公示</a><span>2017-3-16</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="quote">
+                <blockquote>
+                    物理学习网站
+                </blockquote>
+                <ul class="quote_content">
+                    <li><a target="_blank" href="http://www.icourses.cn/coursestatic/course_2182.html">大学物理 - 同济大学 - 顾牡 -资源共享课详细页 - 爱课程</a></li>
+                    <li><a target="_blank" href="http://v.dxsbb.com/ligong/305/">大学物理视频教程全集</a></li>
+                    <li><a target="_blank" href="http://univphys.szu.edu.cn/">大学物理-首页</a></li>
+                    <li><a target="_blank" href="http://www.icourse163.org/course/NUDT-1001673004#/info">国防科学技术大学-大学物理实验</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content2">
+    <div class="container-fluid">
+        <div class="col-md-3">
+            <div class="block" id="block1">
+                <a href="data.html">
+                    <p>实验预习</p>
+                    <img src="images/1.png" class="center-block">
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="block" id="block3">
+                <a href="test.html">
+                    <p>实验测试</p>
+                    <img src="images/3.png" class="center-block">
+                </a>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="block" id="block4">
+                <a href="#" data-toggle="modal" data-target="#reserve">
+                    <p>实验预约</p>
+                    <img src="images/4.png" class="center-block">
+                </a>
+            </div>
+        </div>
+        <div class="col-md-3" >
+            <div class="block" id="block2">
+                <a href="#" data-target="#searchGrade" data-toggle="modal">
+                    <p>成绩查询</p>
+                    <img src="images/2.png" class="center-block">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal modal-dialog" id="searchGrade">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">成绩查询</h4>
+            <div class="modal-body">
+                <table class="table table-hover" id="mytable2">
+                    <thead>
+                    <tr style="font-size: 0.85em;">
+                        <th>实验名称</th>
+                        <th>预习成绩</th>
+                        <th>实验成绩</th>
+                        <th>实验报告成绩</th>
+                        <th>总成绩</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <tr>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                    </tr>
+                    <tr>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                    </tr>
+                    <tr>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                    </tr>
+                    <tr>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                    </tr>
+                    <tr>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                    </tr>
+                    <tr>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                    </tr>
+                    <tr>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                    </tr>
+                     <tr>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                    </tr>
+                     <tr>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                    </tr>
+                     <tr>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                    </tr>
+                     <tr>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                        <th>--</th>
+                    </tr>
+                    </tbody>
+                </table>
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="modal modal-dialog" id="passWord">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="closeModal">&times;</button>
+            <h4 class="modal-title">修改密码</h4>
+            <div class="modal-body">
+                <form>
+                    <p>
+                        <label for="oldpassword">原密码：</label>
+                        <input type="text" class="form-control" id="oldpassword" required placeholder="请输入原密码">
+                    </p>
+                    <p>
+                        <label for="newpassword">新密码：</label>
+                        <input type="text" class="form-control" id="newpassword" required placeholder="请输入新密码">
+                    </p>
+                    <p>
+                        <label for="confirmpassword">确认密码：</label>
+                        <input type="text" class="form-control" id="confirmpassword" required placeholder="请确认密码">
+                    </p>
+                    <input type="submit" class="btn btn-default center-block" value="确认修改">
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="modal modal-dialog" id="reserve">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">实验预约</h4>
+            <div class="modal-body">
+                <div class="alert alert-danger">
+                    请先完成预习任务，然后才能预约实验
+                </div>
+                <div class="alert alert-success">
+                    实验时间：xx-xx-xx<br>
+                    实验教室：xxx<br>
+                    负责教师：xxx<br>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="footer_t"></div>
+<div class="footer">
+	<div class="font">
+		天津大学仁爱学院计算机系<br>
+    copyright&copy;2017
+	</div>
+    
+</div>
+
+
+<script>
+	$(document).ready(function(){
+		$('#updatePwd').bind('click',updatepwd);
+		$('#closeModal').bind('click',closemodal);
+		
+		
+		function updatepwd(){
+			$('#main').removeClass("active");
+			$('#updatePwdParent').addClass("active");
+		}
+		
+		function closemodal(){
+			$('#main').addClass("active");
+			$('#updatePwdParent').removeClass("active");
+		}
+		
+	})
+</script>
+
+<script>
+    $(document).ready(function() {
+        $('#mytable2').DataTable({
+            language: {
+                "sProcessing": "处理中...",
+                "sLengthMenu": "显示 _MENU_ 项结果",
+                "sZeroRecords": "没有匹配结果",
+                "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+                "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
+                "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+                "sInfoPostFix": "",
+                "sSearch": "搜索:",
+                "sUrl": "",
+                "sEmptyTable": "表中数据为空",
+                "sLoadingRecords": "载入中...",
+                "sInfoThousands": ",",
+                "oPaginate": {
+                    "sFirst": "首页",
+                    "sPrevious": "上页",
+                    "sNext": "下页",
+                    "sLast": "末页"
+                },
+                "oAria": {
+                    "sSortAscending": ": 以升序排列此列",
+                    "sSortDescending": ": 以降序排列此列"
+                }
+            }
+
+        });
+    } );
+
+</script>
+</body>
+</html>

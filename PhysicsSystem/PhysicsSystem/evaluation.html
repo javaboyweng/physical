@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>天津大学仁爱学院大学物理实验平台-教师管理后台</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-brand">
+			<span>
+			<img src="images/logo.png">
+            天津大学仁爱学院
+			</span>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">首页</a></li>
+            <li class="active" id="teaEvaluate"><a href="evaluation.html">教师评价</a></li>
+            <li id="updatePwdParent"><a href="#" data-toggle="modal" data-target="#passWord" id="updatePwd">密码修改</a> </li>
+           
+        </ul>
+        <a href="teacher.html" class="btn btn-default navbar-btn pull-right btn-xs">
+            注销
+            <span class="glyphicon glyphicon-off"></span>
+
+        </a>
+        <span style="line-height: 50px;" class="pull-right">xxx同学，欢迎你</span>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top: 60px">
+    <div class="alert alert-info">
+        请同学们及时完成对实验老师的评价！
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            教师评价系统
+        </div>
+        <div class="panel-body">
+            <div class="container-fluid">
+                <div class="media">
+                    <div class="media-left">
+                        <img class="media-object" src="images/t5.png" alt="教师头像">
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">教师姓名</h4>
+                        教师简介<br>
+                        教师简介<br>
+                        教师简介<br>
+                        教师简介<br>
+                    </div>
+                </div>
+
+            </div>
+            <table class="table table-hover table-striped">
+                <thead>
+                <tr>
+                    <th>评价项目</th>
+                    <th>评价选项</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th>项目一:评价描述评价描述评价描述评价描述评价描述评价描述评价描述</th>
+                    <th>
+                        <select>
+                            <option>等级A</option>
+                            <option>等级B</option>
+                            <option>等级C</option>
+                            <option>等级D</option>
+                            <option>等级E</option>
+                            <option>等级F</option>
+                        </select>
+                    </th>
+                </tr>
+                <tr>
+                    <th>项目二:评价描述评价描述评价描述评价描述评价描述评价描述评价描述</th>
+                    <th>
+                        <select>
+                            <option>等级A</option>
+                            <option>等级B</option>
+                            <option>等级C</option>
+                            <option>等级D</option>
+                            <option>等级E</option>
+                            <option>等级F</option>
+                        </select>
+                    </th>
+                </tr>
+                <tr>
+                    <th>项目三:评价描述评价描述评价描述评价描述评价描述评价描述评价描述</th>
+                    <th>
+                        <select>
+                            <option>等级A</option>
+                            <option>等级B</option>
+                            <option>等级C</option>
+                            <option>等级D</option>
+                            <option>等级E</option>
+                            <option>等级F</option>
+                        </select>
+                    </th>
+                </tr>
+                <tr>
+                    <th>项目四:评价描述评价描述评价描述评价描述评价描述评价描述评价描述</th>
+                    <th>
+                        <select>
+                            <option>等级A</option>
+                            <option>等级B</option>
+                            <option>等级C</option>
+                            <option>等级D</option>
+                            <option>等级E</option>
+                            <option>等级F</option>
+                        </select>
+                    </th>
+                </tr>  <tr>
+                    <th>项目五:评价描述评价描述评价描述评价描述评价描述评价描述评价描述</th>
+                    <th>
+                        <select>
+                            <option>等级A</option>
+                            <option>等级B</option>
+                            <option>等级C</option>
+                            <option>等级D</option>
+                            <option>等级E</option>
+                            <option>等级F</option>
+                        </select>
+                    </th>
+                </tr>
+                <tr>
+                    <th>项目六:评价描述评价描述评价描述评价描述评价描述评价描述评价描述</th>
+                    <th>
+                        <select>
+                            <option>等级A</option>
+                            <option>等级B</option>
+                            <option>等级C</option>
+                            <option>等级D</option>
+                            <option>等级E</option>
+                            <option>等级F</option>
+                        </select>
+                    </th>
+                </tr>
+                <tr>
+                    <th>项目七:评价描述评价描述评价描述评价描述评价描述评价描述评价描述</th>
+                    <th>
+                        <select>
+                            <option>等级A</option>
+                            <option>等级B</option>
+                            <option>等级C</option>
+                            <option>等级D</option>
+                            <option>等级E</option>
+                            <option>等级F</option>
+                        </select>
+                    </th>
+                </tr>
+
+                </tbody>
+            </table>
+            <button class="btn btn-info btn-lg center-block">
+                提交评价
+
+            </button>
+
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+<div class="modal modal-dialog" id="passWord">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="closeModal">&times;</button>
+            <h4 class="modal-title">修改密码</h4>
+            <div class="modal-body">
+                <form>
+                    <p>
+                        <label for="oldpassword">原密码：</label>
+                        <input type="text" class="form-control" id="oldpassword" required placeholder="请输入原密码">
+                    </p>
+                    <p>
+                        <label for="newpassword">新密码：</label>
+                        <input type="text" class="form-control" id="newpassword" required placeholder="请输入新密码">
+                    </p>
+                    <p>
+                        <label for="confirmpassword">确认密码：</label>
+                        <input type="text" class="form-control" id="confirmpassword" required placeholder="请确认密码">
+                    </p>
+                    <input type="submit" class="btn btn-default center-block">
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="footer_t"></div>
+<div class="footer">
+  <div class="font">
+		天津大学仁爱学院计算机系<br>
+    copyright&copy;2017
+	</div>
+
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/index.js"></script>
+
+
+<script>
+	$(document).ready(function(){
+		$('#updatePwd').bind('click',updatepwd);
+		$('#closeModal').bind('click',closemodal);
+		
+		
+		function updatepwd(){
+			$('#teaEvaluate').removeClass("active");
+			$('#updatePwdParent').addClass("active");
+		}
+		
+		function closemodal(){
+			$('#teaEvaluate').addClass("active");
+			$('#updatePwdParent').removeClass("active");
+		}
+		
+	})
+</script>
+
+</body>
+</html>

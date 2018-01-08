@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>天津大学仁爱学院大学物理实验平台-教师管理后台</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-brand">
+			<span>
+			<img src="images/logo.png">
+            天津大学仁爱学院
+			</span>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="evaluation.html">教师评价</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#passWord">密码修改</a> </li>
+        </ul>
+         <a href="teacher.html" class="btn btn-default navbar-btn pull-right btn-xs">
+            注销
+            <span class="glyphicon glyphicon-off"></span>
+
+        </a>
+        <span style="line-height: 50px;" class="pull-right">xxx同学，欢迎你&nbsp;&nbsp;</span>
+    </div>
+</nav>
+<div class="jumbotron teacher_banner img-responsive">
+    <div class="container">
+        <h1>公告</h1>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="ann1_content">
+        <blockquote>
+            公告正文
+        </blockquote>
+        <div class="ann_header">
+            <h4 class="ann_title">图书馆业务交流研讨会在我院举行</h4>
+            <div class="ann_btn">[&nbsp;字体：&nbsp;<a href="javascript:void(0);" id="font_b">大</a>&nbsp;<a href="javascript:void(0);" id="font_m">中</a>&nbsp;<a href="javascript:void(0);" id="font_s">小</a>&nbsp;]</div>
+            <div class="ann_time">发布时间：2017-3-28</div>
+        </div>
+        <p class="container ann_body" id="font">
+            3月15-16日，图书馆业务交流研讨会在我院图书馆举行，来自内蒙古锡林郭勒盟地区、天津市的14个公共图书馆、高校图书馆馆长及业务骨干参加了本次研讨会。
+            15日上午9：30，会议正式开始。天津大学仁爱学院副院长钱桂荣、天津市高等教育文献信息中心副主任李广生、内蒙古锡林郭勒盟图书馆馆长王力军先后做了会议致辞。本次会议由天津大学仁爱学院图书馆朱贵玲馆长主持。会后与会人员参观了天津大学仁爱学院图书馆。15日下午起，本次会议的主题发言部分正式开始，仁爱学院图书馆馆员们围绕“天津大学仁爱学院图书馆‘服务体系’建设汇报”、“流通工作服务管理”、“以导读为视角创新馆刊，构建校园阅读推广平台”、“图书馆采访工作及《中图法》分类标引规则”、“中文普通图书编目工作”、“Office软件在图书馆工作中的应用”、“图书馆的演变与展望”、“学习共享空间：知识共享之学术系列讲座”、“图书馆以“党建”为背景的资讯推送 ”、“图书馆读书会的实践活动”、“阅读疗法在图书馆中的应用”等图书馆相关业务主题做了发言并同与会人员进行了相互交流。会后还召开了馆长座谈会，馆长们就日常管理工作中的经验及遇到的问题进行了交流。
+            本次研讨会在积极热烈的气氛下圆满结束，与会人员均表示他们在相互交流中学到了图书馆专业知识以及各馆的先进经验，对于今后在工作中不断提升图书馆业务水平具有重要意义。
+        </p>
+
+    </div>
+
+</div>
+<div class="modal modal-dialog" id="passWord">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">修改密码</h4>
+            <div class="modal-body">
+                <form>
+                    <p>
+                        <label for="oldpassword">原密码：</label>
+                        <input type="text" class="form-control" id="oldpassword" required placeholder="请输入原密码">
+                    </p>
+                    <p>
+                        <label for="newpassword">新密码：</label>
+                        <input type="text" class="form-control" id="newpassword" required placeholder="请输入新密码">
+                    </p>
+                    <p>
+                        <label for="confirmpassword">确认密码：</label>
+                        <input type="text" class="form-control" id="confirmpassword" required placeholder="请确认密码">
+                    </p>
+                    <input type="submit" class="btn btn-default center-block">
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="footer_t"></div>
+<div class="footer">
+  <div class="font">
+		天津大学仁爱学院计算机系<br>
+    copyright&copy;2017
+	</div>
+
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/index.js"></script>
+<script>
+    $(function () {
+        $('#font_b').click(function () {
+            $('#font').css("font-size","20px");
+        })
+        $('#font_m').click(function () {
+            $('#font').css("font-size","16px");
+        })
+        $('#font_s').click(function () {
+            $('#font').css("font-size","12px");
+        })
+
+    })
+
+</script>
+
+
+</body>
+</html>

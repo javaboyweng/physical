@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>天津大学仁爱学院大学物理实验平台-教师管理后台</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/editor.css">
+    <link rel="stylesheet" href="css/data.css">
+   <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/jquery.dataTables.css">
+    <link rel="stylesheet" href="css/laydate.css"
+    <link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/page.js"></script>
+</head>
+<body>
+<!---->
+<div class="jumbotron teacher_banner img-responsive" style="margin-top: 0px;height: 170px;">
+    <div class="container">
+    	
+        <h1>教师管理后台</h1>
+        
+		<a href="index.html" class="btn btn-default navbar-btn pull-right btn-xs" style="margin-right: 8px;">
+	            注销
+	            <span class="glyphicon glyphicon-off"></span>
+	
+	        </a>
+	        <span style="line-height: 50px;" class="pull-right">xxx老师，欢迎你&nbsp;&nbsp;</span>
+	        
+    </div>
+   
+    	
+     
+</div>
+
+<div class="teacher_content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+              <div class="teacher_left">
+                  <ul class="nav nav-pills nav-stacked">
+                      <li><a href="#" id="anno"><span class="glyphicon glyphicon-cog"></span>发布公告</a></li>
+                      <li><a href="#" id="info"><span class="glyphicon glyphicon-list-alt"></span>查看学生成绩</a></li>
+                  </ul>
+              </div>
+            </div>
+            <div class="col-md-9">
+                <!--发布公告-->
+				<div class="teacher_right" id="announce"  style="display: block;">
+                   <div style="padding-bottom: 60px;">
+                       <blockquote>
+                           发布公告
+                       </blockquote>
+                       <input id="txtEditor1" type="text" />
+
+                      
+                       <button class="btn btn-primary" style="margin-top: 20px;float: right;">
+                           发布
+                       </button>
+                   </div>
+               </div>
+				<!--查看成绩-->
+				<div class="teacher_right" id="getGread" style="display: none;">
+                    <blockquote>
+                        查看学生成绩
+                    </blockquote>
+                    <table class="table table-hover" id="mytable1">
+                        <thead>
+                        <tr>
+                            <th>姓名</th>
+                            <th>学号</th>
+                            <th>系别</th>
+                            <th>专业</th>
+                            <th>班级</th>
+                            <th>成绩</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th>测试用户1</th>
+                            <th>000001</th>
+                            <th>计算机系</th>
+                            <th>软件工程</th>
+                            <th>班级005</th>
+                            <th>95</th>
+                        </tr>
+                        <tr>
+                            <th>测试用户2</th>
+                            <th>000002</th>
+                            <th>计算机系</th>
+                            <th>计算机科学与技术</th>
+                            <th>班级001</th>
+                            <th>80</th>
+                        </tr>
+                        <tr>
+                            <th>测试用户3</th>
+                            <th>000003</th>
+                            <th>计算机系</th>
+                            <th>软件工程</th>
+                            <th>班级002</th>
+                            <th>60</th>
+                        </tr>
+                        <tr>
+                            <th>测试用户4</th>
+                            <th>000004</th>
+                            <th>社外系</th>
+                            <th>法学</th>
+                            <th>班级003</th>
+                            <th>52</th>
+                        </tr>
+                        <tr>
+                            <th>测试用户5</th>
+                            <th>000005</th>
+                            <th>信息系</th>
+                            <th>信息工程</th>
+                            <th>班级007</th>
+                            <th>29</th>
+                        </tr>
+                        <tr>
+                            <th>测试用户7</th>
+                            <th>000007</th>
+                            <th>信息系</th>
+                            <th>信息工程</th>
+                            <th>班级009</th>
+                            <th>13</th>
+                        </tr>
+                        <tr>
+                            <th>测试用户6</th>
+                            <th>000006</th>
+                            <th>信息系</th>
+                            <th>信息工程</th>
+                            <th>班级017</th>
+                            <th>29</th>
+                        </tr>
+                        <tr>
+                            <th>测试用户8</th>
+                            <th>000008</th>
+                            <th>信息系</th>
+                            <th>信息工程</th>
+                            <th>班级008</th>
+                            <th>62</th>
+                        </tr>
+                        <tr>
+                            <th>测试用户9</th>
+                            <th>000009</th>
+                            <th>社外系</th>
+                            <th>法学</th>
+                            <th>班级001</th>
+                            <th>23</th>
+                        </tr>
+                        <tr>
+                            <th>测试用户10</th>
+                            <th>000010</th>
+                            <th>社外系</th>
+                            <th>法学</th>
+                            <th>班级003</th>
+                            <th>66</th>
+                        </tr>
+                        <tr>
+                            <th>苗港</th>
+                            <th>10010</th>
+                            <th>计算机系</th>
+                            <th>软件工程</th>
+                            <th>班级003</th>
+                            <th>100</th>
+                        </tr>
+                        <tr>
+                            <th>测试用户18</th>
+                            <th>000018</th>
+                            <th>计算机系</th>
+                            <th>计算机科学与技术</th>
+                            <th>班级011</th>
+                            <th>99</th>
+                        </tr>
+                        <tr>
+                            <th>测试用户12</th>
+                            <th>000012</th>
+                            <th>计算机系</th>
+                            <th>软件工程</th>
+                            <th>班级020</th>
+                            <th>88</th>
+                        </tr>
+                        <tr>
+                            <th>测试用户13</th>
+                            <th>000013</th>
+                            <th>计算机系</th>
+                            <th>计算机科学与技术</th>
+                            <th>班级004</th>
+                            <th>89</th>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+				
+				
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="footer_t"></div>
+<div class="footer">
+    天津大学仁爱学院计算机系<br>
+    copyright&copy;2017
+
+</div>
+
+<script src="js/bootstrap.js"></script>
+<script src="js/index.js"></script>
+<script src="js/editor.js"></script>
+<script src="js/dataTables.bootstrap.js"></script>
+<script src="js/jquery.dataTables.min.js"></script>
+<script src="js/laydate.js"></script>
+<script>
+    $(document).ready(function() {
+    	$("#txtEditor1").Editor({
+            'bold':false,
+            'print':false,
+            'insert_table':false,
+            'insert_link':false,
+            'unlink':false,
+            'block_quote':false,
+            'strike_through':false,
+            'ol':false,
+            'ul':false,
+            'justify':false,
+            'strikeout':false,
+            'hr_line':false,
+        });
+        
+    	
+    	
+        $('#mytable1').DataTable({
+            language: {
+                "sProcessing": "处理中...",
+                "sLengthMenu": "显示 _MENU_ 项结果",
+                "sZeroRecords": "没有匹配结果",
+                "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+                "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
+                "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+                "sInfoPostFix": "",
+                "sSearch": "搜索:",
+                "sUrl": "",
+                "sEmptyTable": "表中数据为空",
+                "sLoadingRecords": "载入中...",
+                "sInfoThousands": ",",
+                "oPaginate": {
+                    "sFirst": "首页",
+                    "sPrevious": "上页",
+                    "sNext": "下页",
+                    "sLast": "末页"
+                },
+                "oAria": {
+                    "sSortAscending": ": 以升序排列此列",
+                    "sSortDescending": ": 以降序排列此列"
+                }
+            }
+
+        });
+    	
+       
+    });
+</script>
+</body>
+</html>

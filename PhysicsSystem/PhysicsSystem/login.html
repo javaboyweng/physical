@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>登录</title>
+		<link rel="stylesheet" href="plugins/layui/css/layui.css" media="all" />
+		<link rel="stylesheet" href="css/login.css" />
+		
+		
+		
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/login.js"></script>
+		<link href="css/login2.css" rel="stylesheet" type="text/css" />
+		<script src="js/cloud.js"></script>
+	</head>
+
+	<body class="beg-login-bg">
+		
+			<div id="cloud1" class="cloud"></div>
+		    <div id="cloud2" class="cloud"></div>
+		
+		
+		<div class="beg-login-box" >
+			<header>
+				<h1 style="margin-top: 0px;">物理实验平台登录<sup>2017</sup></h1>
+			</header>
+			<div class="beg-login-main">
+				
+					<form action="#" class="layui-form" method="post">
+                
+					<div class="layui-form-item">
+						<label class="beg-login-icon">
+                        <i class="layui-icon" style="margin-left: -30px;">&#xe612;</i>
+                    </label>
+						<input type="text" name="userName" lay-verify="userName" autocomplete="off" placeholder="这里输入登录名" class="layui-input" style="width: 300px;margin-left: -30px;">
+					</div>
+					<div class="layui-form-item">
+						<label class="beg-login-icon">
+                        <i class="layui-icon" style="margin-left: -30px;">&#xe642;</i>
+                    </label>
+						<input type="password" name="password" lay-verify="password" autocomplete="off" placeholder="这里输入密码" class="layui-input" style="width: 300px;margin-left: -30px;">
+					</div>
+					<div class="layui-input-block" style="margin-left:-30px;">
+                    <input type="checkbox" name="tabel_style" lay-check-type="radio"  title="学生">
+                    <input type="checkbox" name="tabel_style" lay-check-type="radio"  title="老师"checked="checked">
+                    <input type="checkbox" name="tabel_style" lay-check-type="radio"  title="管理员">
+                    </div>
+				    <br />
+					<div class="layui-form-item" style="margin-left:-30px;">
+						<div class="beg-pull-left beg-login-remember">
+							<label>记住帐号？</label>
+							<input type="checkbox" name="rememberMe" value="true" lay-skin="switch" checked title="记住帐号">
+						</div>
+						<div class="beg-pull-right" >
+							<button class="layui-btn layui-btn-normal layui-btn-radius"  lay-submit lay-filter="login">
+                            <i class="layui-icon" >&#xe613;&nbsp;</i> 登录
+                        </button>
+						</div>
+						<div class="beg-clear"></div>
+					</div>
+				</form>
+
+				</div>
+			
+		</div>
+		<script type="text/javascript" src="plugins/layui/layui.js"></script>
+		<script>
+			layui.use(['layer', 'form'], function() {
+				var layer = layui.layer,
+					$ = layui.jquery,
+					form = layui.form();
+					
+				form.on('submit(login)',function(data){
+					
+					location.href='index.html';
+					return false;
+				});
+			});
+			
+		    layui.use(['form'], function(){
+                var form = layui.form();
+                form.on('checkbox', function (data) {
+                var name = data.elem.getAttribute("name");
+                   if (data.elem.getAttribute("lay-check-type") === "radio" && name) {
+                var domArr = document.getElementsByName(name);
+                var checked = false;
+                for (var i = 0; i < domArr.length; i++) {
+                    if (domArr[i] !== data.elem && domArr[i].getAttribute("lay-check-type") === "radio") {
+                        if (data.elem.checked) {
+                            domArr[i].checked = false;
+                        } else if (domArr[i].checked) {
+                            checked = true;
+                        }
+                    }
+                }
+                data.elem.checked = !checked ? true : data.elem.checked;
+                form.render('checkbox');
+            }
+        });
+    })
+			
+			
+		</script>
+	</body>
+
+</html>

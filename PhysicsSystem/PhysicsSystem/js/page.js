@@ -1,0 +1,27 @@
+$(function(){
+	$("#upload").click(function(){
+		$("#experimentUpload").show();
+		$("#announce").hide();
+		$("#experiment").hide();
+		$("#getGread").hide();
+
+	});
+	$("#anno").click(function(){
+		$("#experimentUpload").hide();
+		$("#announce").show();
+		$("#experiment").hide();
+		$("#getGread").hide();
+	});
+	$("#exper").click(function(){
+		$("#experimentUpload").hide();
+		$("#announce").hide();
+		$("#experiment").show();
+		$("#getGread").hide();
+	});
+	$("#info").click(function(){
+		$("#experimentUpload").hide();
+		$("#announce").hide();
+		$("#experiment").hide();
+		$("#getGread").show();
+	});	
+});
